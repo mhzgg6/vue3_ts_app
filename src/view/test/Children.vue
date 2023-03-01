@@ -2,6 +2,7 @@
   <div class="test-children"> 
     <p>{{ title }}</p>
     <button @click="onChangeTitle">ssssss</button>
+    <slot name="content" age="15"></slot>
   </div>
 </template>
 

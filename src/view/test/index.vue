@@ -14,7 +14,12 @@
     <h4>{{ age }}</h4>
     <h4>{{ tom.age }}-{{ tom.name }}</h4>
 
-    <Children ref="childRef" :title="title" @changeTitle="changeTitle"></Children>
+    <Children ref="childRef" :title="title" @changeTitle="changeTitle">
+      <template v-slot:content="tip">
+        <div>hhh</div>
+        <div>{{ tip.age  }}</div>
+      </template>
+    </Children>
   </div>
 </template>
 
@@ -28,6 +33,7 @@ type Person = {
   gender?: string
 }
 
+const tip = ref('dddd')
 const title = ref<string>('hello world')
 const user = reactive<Person>({
   name: 'mhz',
@@ -85,8 +91,9 @@ const changeTitle = (msg: string) => {
 }
 
 //  通过 ref 获取子组件属性
-const childRef = ref(null)
-console.log(childRef.value?.date);
+const childRef = ref<HTMLElement | null>(null)
+// console.log(childRef.value?.date);
+
 
 </script>
 
