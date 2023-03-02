@@ -5,6 +5,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/test',
     name: 'Test',
     component: () => import('../view/test/index.vue')
+  },
+  {
+    path: '/teleport',
+    name: 'Teleport',
+    component: () => import('../view/test/Teleport.vue')
   }
 ]
 
