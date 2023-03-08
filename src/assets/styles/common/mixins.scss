@@ -1,0 +1,11 @@
+// @mixin font-theme($k, $important: false) {
+//   @each $themename, $theme in $themes {
+//     .#{$themename} & {
+//       @if $important {
+//         color: map-get($map: $theme, $key: $k) !important;
+//       } @else {
+//         color: map-get($map: $theme, $key: $k);
+//       }
+//     }
+//   }
+// }

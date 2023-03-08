@@ -119,4 +119,9 @@ const modalIsOpen = ref(false)
 
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+h4{
+  // color: $h4Color;
+  @include font-theme('main');
+}
+</style>
